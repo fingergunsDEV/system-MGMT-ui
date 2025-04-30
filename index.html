@@ -1,0 +1,329 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="lock-screen">
+    <div class="fingerprint-scanner">
+      <div class="scan-line"></div>
+      <svg viewBox="0 0 100 100">
+        <path d="M50 20
+                 C60 20 70 25 75 35
+                 C80 45 80 55 75 65
+                 C70 75 60 80 50 80
+                 C40 80 30 75 25 65
+                 C20 55 20 45 25 35
+                 C30 25 40 20 50 20" />
+        <path d="M50 40
+                 C55 40 60 42 62 47
+                 C64 52 64 57 62 62
+                 C60 67 55 70 50 70
+                 C45 70 40 67 38 62
+                 C36 57 36 52 38 47
+                 C40 42 45 40 50 40" />
+        <line x1="50" y1="20" x2="50" y2="80" />
+        <line x1="25" y1="50" x2="75" y2="50" />
+      </svg>
+    </div>
+    <div class="lock-screen-text">SCAN TO UNLOCK</div>
+  </div>
+
+  <nav class="nav-menu">
+    <div class="nav-item active" data-panel="main">MAIN</div>
+    <div class="nav-item" data-panel="systems">SYSTEMS</div>
+    <div class="nav-item" data-panel="analytics">ANALYTICS</div>
+    <div class="nav-item" data-panel="settings">SETTINGS</div>
+  </nav>
+
+  <div class="container">
+    <div class="hud">
+      <!-- Main Panel -->
+      <div class="panel active" id="main-panel">
+        <div class="status-bar">
+          <div class="status-item">
+            <div class="status-label">SYSTEM</div>
+            <div class="status-value pulse">ONLINE</div>
+          </div>
+          <div class="status-item">
+            <div class="status-label">POWER</div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hexagon-grid">
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+
+        <div class="circle-loader">
+          <svg viewBox="0 0 100 100">
+            <circle class="loader-circle" cx="50" cy="50" r="45"/>
+          </svg>
+        </div>
+
+        <div class="data-panel">
+          <div class="data-header">NEURAL INTERFACE</div>
+          <div class="data-content">
+            <div class="data-line"></div>
+            <div class="data-line"></div>
+            <div class="data-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Systems Panel -->
+      <div class="panel" id="systems-panel">
+        <h2 class="panel-title">SYSTEM STATUS</h2>
+        <div class="systems-grid">
+          <div class="system-card" data-system="power">
+            <div class="system-icon">⚡</div>
+            <div class="system-name">POWER CORE</div>
+            <div class="system-status">OPERATIONAL</div>
+            <div class="system-details">
+              <div class="detail-item">
+                <span class="detail-label">Output:</span>
+                <span class="detail-value">1.21 GW</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Temperature:</span>
+                <span class="detail-value">312K</span>
+              </div>
+              <div class="system-controls">
+                <button class="system-btn">OPTIMIZE</button>
+                <button class="system-btn">DIAGNOSTICS</button>
+              </div>
+            </div>
+          </div>
+          <div class="system-card" data-system="maintenance">
+            <div class="system-icon">🔧</div>
+            <div class="system-name">MAINTENANCE</div>
+            <div class="system-status">SCHEDULED</div>
+            <div class="system-details">
+              <div class="detail-item">
+                <span class="detail-label">Next Check:</span>
+                <span class="detail-value">3h 42m</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Priority:</span>
+                <span class="detail-value">LOW</span>
+              </div>
+              <div class="system-controls">
+                <button class="system-btn">START NOW</button>
+                <button class="system-btn">RESCHEDULE</button>
+              </div>
+            </div>
+          </div>
+          <div class="system-card" data-system="defense">
+            <div class="system-icon">🛡️</div>
+            <div class="system-name">DEFENSES</div>
+            <div class="system-status">ACTIVE</div>
+            <div class="system-details">
+              <div class="detail-item">
+                <span class="detail-label">Shield Strength:</span>
+                <span class="detail-value">98%</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Threats:</span>
+                <span class="detail-value">0</span>
+              </div>
+              <div class="system-controls">
+                <button class="system-btn">BOOST</button>
+                <button class="system-btn">SCAN</button>
+              </div>
+            </div>
+          </div>
+          <div class="system-card" data-system="network">
+            <div class="system-icon">🌐</div>
+            <div class="system-name">NETWORK</div>
+            <div class="system-status">STABLE</div>
+            <div class="system-details">
+              <div class="detail-item">
+                <span class="detail-label">Bandwidth:</span>
+                <span class="detail-value">42 TB/s</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Latency:</span>
+                <span class="detail-value">0.3ms</span>
+              </div>
+              <div class="system-controls">
+                <button class="system-btn">ROUTE</button>
+                <button class="system-btn">OPTIMIZE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="system-overview">
+          <h3>SYSTEM OVERVIEW</h3>
+          <div class="overview-grid">
+            <div class="overview-item">
+              <svg class="circular-progress" viewBox="0 0 36 36">
+                <path d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#00fff233"
+                  stroke-width="2"
+                />
+                <path class="progress" d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+                  fill="none"
+                  stroke="#00fff2"
+                  stroke-width="2"
+                  stroke-dasharray="90, 100"
+                />
+              </svg>
+              <span class="overview-label">TOTAL EFFICIENCY</span>
+            </div>
+            <div class="system-logs">
+              <div class="log-entry">ROUTINE MAINTENANCE COMPLETED</div>
+              <div class="log-entry">NETWORK OPTIMIZATION IN PROGRESS</div>
+              <div class="log-entry">DEFENSE PROTOCOLS UPDATED</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analytics Panel -->
+      <div class="panel" id="analytics-panel">
+        <h2 class="panel-title">ANALYTICS</h2>
+        <div class="chart-container">
+          <canvas id="analyticsChart"></canvas>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">98.2%</div>
+            <div class="metric-label">EFFICIENCY</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">1.28ms</div>
+            <div class="metric-label">RESPONSE TIME</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Panel -->
+      <div class="panel" id="settings-panel">
+        <h2 class="panel-title">SETTINGS</h2>
+        <div class="settings-grid">
+          <div class="setting-group">
+            <div class="setting-group-title">System</div>
+            <div class="setting-item">
+              <label class="setting-label">SYSTEM MODE</label>
+              <select class="futuristic-select" id="systemMode">
+                <option>NORMAL</option>
+                <option>POWER SAVE</option>
+                <option>PERFORMANCE</option>
+              </select>
+            </div>
+            <div class="setting-item">
+              <label class="setting-label">AUTO-REPAIR</label>
+              <label class="toggle">
+                <input type="checkbox" id="autoRepair" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="setting-group">
+            <div class="setting-group-title">Power Management</div>
+            <div class="setting-item">
+              <div>
+                <label class="setting-label">POWER LIMIT</label>
+                <div class="setting-description">Maximum power consumption allowed</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <input type="range" class="range-slider" id="powerLimit" min="0" max="100" value="80">
+                <span class="setting-value" id="powerLimitValue">80%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-group-title">Security</div>
+            <div class="setting-item">
+              <label class="setting-label">SECURITY LEVEL</label>
+              <select class="futuristic-select" id="securityLevel">
+                <option>LOW</option>
+                <option>MEDIUM</option>
+                <option selected>HIGH</option>
+                <option>MAXIMUM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-group-title">Maintenance</div>
+            <div class="setting-item">
+              <label class="setting-label">NOTIFICATIONS</label>
+              <label class="toggle">
+                <input type="checkbox" id="notifications" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <label class="setting-label">MAINTENANCE SCHEDULE</label>
+              <select class="futuristic-select" id="maintenance">
+                <option>MANUAL</option>
+                <option selected>AUTOMATIC</option>
+                <option>SCHEDULED</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-group-title">Network</div>
+            <div class="setting-item">
+              <label class="setting-label">NETWORK OPTIMIZATION</label>
+              <label class="toggle">
+                <input type="checkbox" id="networkOptimization" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="setting-item">
+              <label class="setting-label">BACKUP FREQUENCY</label>
+              <select class="futuristic-select" id="backupFrequency">
+                <option>HOURLY</option>
+                <option selected>DAILY</option>
+                <option>WEEKLY</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-group-title">Advanced</div>
+            <div class="setting-item">
+              <label class="setting-label">PERFORMANCE MODE</label>
+              <select class="futuristic-select" id="performanceMode">
+                <option>EFFICIENCY</option>
+                <option selected>BALANCED</option>
+                <option>MAXIMUM</option>
+              </select>
+            </div>
+            <div class="setting-item">
+              <label class="setting-label">DEBUG MODE</label>
+              <label class="toggle">
+                <input type="checkbox" id="debugMode">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="navigation.js"></script>
+  <script src="analytics.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
